@@ -24,7 +24,7 @@ const ProductCard = ({id,img,name,price,category,reviews}:IProduct) => {
   return (
     <div className="border border-gray-200 rounded-md">
         <div className="text-center border-b border-gray-200 ">
-            <img src={img} alt="img" className="inline-block w-[300px] h-[300px] object-cove" />
+            <img src={img} alt="img" className=" w-[300px] h-[300px] object-contain" />
         </div>
         <div className="px-8 py-4">
             <p className="text-gray-500 text-[14px] font-medium">{category}</p>
@@ -39,7 +39,7 @@ const ProductCard = ({id,img,name,price,category,reviews}:IProduct) => {
             </div>
             <div className="flex justify-between items-center mt-4">
                 <h2 className="font-medium text-red-400 text-xl mr-2">${price}</h2>
-                <div className="flex gap-1  items-center rounded-full bg-blue-400 text-white px-3 py-3 cursor-pointer hover:bg-blue-600" onClick={addProduct}>
+                <div className=" rounded-full bg-blue-400 text-white px-3 py-3 cursor-pointer hover:bg-blue-600" onClick={addProduct}>
                     <AiOutlineShoppingCart size={24}/>
                 </div>
             </div>

@@ -14,7 +14,6 @@ export default function Home() {
   return (
     <main>
       <NavBar setShowCart={setShowCart}/>
-
       {showCart && <SideCart setShowCart={setShowCart}/>}
       <Banner/>
       <Feature/>

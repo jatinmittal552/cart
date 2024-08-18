@@ -2,7 +2,7 @@
 const Banner = () => {
   return (
     <div className="bg-slate-200 mt-4">
-        <div className="container grid md:grid-cols-2 py-8">
+        <div className="grid md:grid-cols-2 py-8">
             <div className="flex items-center justify-evenly">
                 <div className="max-w-[450px] space-y-4">
                     <p className="text-black">

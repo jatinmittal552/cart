@@ -26,18 +26,21 @@ const SideCart = ({setShowCart}:PropsType) => {
             <h3 className="pt-2 text-lg font-bold text-gray-600 uppercase">
                 your cart
             </h3>
-            <div className="mt-6 space-y-2">
+            {products.length===0 
+            ? <div className='grid place-content-center text-xl font-medium mt-[50px] mb-[30px] uppercase'>Your Cart is empty</div>
+            : <div className="mt-6 space-y-2">
                 {products.map((item)=>(
                     <SideCard
-                        key={item.id}
-                        id={item.id}
-                        image={item.image}
-                        name={item.name}
-                        price={item.price}
-                        quantity={item.quantity}
+                    key={item.id}
+                    id={item.id}
+                    image={item.image}
+                    name={item.name}
+                    price={item.price}
+                    quantity={item.quantity}
                     />
                 ))}
             </div>
+            }
             <div className="flex justify-between items-center font-medium text-xl py-4">
                 <p>Total:</p>
                 <p>${getTotal()}</p>
