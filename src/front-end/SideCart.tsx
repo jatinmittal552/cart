@@ -12,7 +12,7 @@ const SideCart = ({setShowCart}:PropsType) => {
     const getTotal=()=>{
         let total = 0;
         products.forEach((item)=>total=total+item.price*item.quantity)
-        return total;
+        return total.toFixed(2);
     }
   return (
     <div className="bg-[#0000007d] w-full min-h-screen fixed left-0 top-0 z-20 overflow-y-scroll">
@@ -40,7 +40,7 @@ const SideCart = ({setShowCart}:PropsType) => {
             </div>
             <div className="flex justify-between items-center font-medium text-xl py-4">
                 <p>Total:</p>
-                <p>${getTotal()}.00</p>
+                <p>${getTotal()}</p>
             </div>
             <button className="bg-black text-white text-center w-full rounded-3xl py-2 hover:bg-blue-300 mb-4 mt-4">
                 View Cart
