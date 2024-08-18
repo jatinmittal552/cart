@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import { RootState } from '@/redux/store'
 import { RxCross1 } from 'react-icons/rx'
 import SideCard from './SideCard'
+import toast from 'react-hot-toast'
 interface PropsType{
     setShowCart:Dispatch<SetStateAction<boolean>>
 }
@@ -18,7 +19,9 @@ const SideCart = ({setShowCart}:PropsType) => {
         <div className="max-w-[400px] w-full min-h-full bg-white absolute right-0 top-0 p-6">
             <RxCross1
                 className="absolute right-0 top-1 m-6 text-[24px] cursor-pointer"
-                onClick={()=>{setShowCart(false)}}
+                onClick={()=>{
+                    setShowCart(false)
+                }}
             />
             <h3 className="pt-2 text-lg font-bold text-gray-600 uppercase">
                 your cart

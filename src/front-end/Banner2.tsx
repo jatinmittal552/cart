@@ -2,9 +2,9 @@ import React from 'react'
 
 const Banner2 = () => {
   return (
-    <div className='container mt-3'>
-        <div className="grid lg:grid-cols-[66%,35%] gap-3 pr-10 mx-[100px]">
-            <div className="h-[200px] md:h-[260px] bg-gray-300 flex items-center justify-evenly  mr-[20px] ">
+    <div className='container mt-7'>
+        <div className="grid lg:grid-cols-[66%,35%] gap-3 pr-10 mx-[100px] ">
+            <div className="h-[200px] md:h-[260px] bg-gray-300 flex items-center justify-evenly rounded-xl mr-[20px] ">
                 <div className="max-w-[450px] ">
 
                     <p className="text-topHeadingSecondary text-xl font-medium">
@@ -18,7 +18,7 @@ const Banner2 = () => {
                     </a>
                 </div>
             </div>
-            <div className="flex justify-evenly bg-gray-200  max-h-[260px] ">
+            <div className="flex justify-evenly rounded-xl bg-gray-200  max-h-[260px] ">
                 <img src="i.jpg" alt="img" className="p-1 max-h-full max-w-full object-fill" />
             </div>
         </div>

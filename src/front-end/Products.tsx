@@ -29,8 +29,8 @@ const Products = () => {
       }, []);
     
   return (
-    <div className="container mt-10">
-        <div className="sm:flex justify-between items-center mx-[100px]">
+    <div className="container mt-10 px-10">
+        <div className="sm:flex justify-between items-center ">
             <h2 className="text-4xl font-medium">Products</h2>
             <div className="text-gray-400 flex gap-4 text-xl mt-4 sm:mt-0">
                 <div>New</div>

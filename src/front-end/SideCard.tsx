@@ -1,8 +1,9 @@
+"use client"
 import React from 'react'
 import { removeCart } from '@/redux/features/cardSlicer'
 import { useDispatch } from 'react-redux'
 import { RxCross1 } from 'react-icons/rx'
-
+import toast from 'react-hot-toast'
 interface propsType{
     id:number,
     image:string,
@@ -23,7 +24,11 @@ const SideCard = ({id,image,name,price,quantity}:propsType)=> {
                 </p> 
             </div>
         </div>
-        <RxCross1 className="cursor-pointer" onClick={()=>dispatch(removeCart(id))}/>
+        <RxCross1 className="cursor-pointer"
+            onClick={()=>{
+                dispatch(removeCart(id)) 
+                toast.error("Remove from Cart")
+            }}/>
     </div>
   );
 };
